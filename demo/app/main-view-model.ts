@@ -1,14 +1,19 @@
+import { ObservableArray } from 'tns-core-modules/data/observable-array';
 import { Observable } from 'tns-core-modules/data/observable';
 import { IotWifi } from 'nativescript-iot-wifi';
 
 export class HelloWorldModel extends Observable {
   public message: string;
-  private iotWifi: IotWifi;
 
   constructor() {
     super();
+    let iotWifit = new IotWifi();
 
-    this.iotWifi = new IotWifi();
-    this.message = this.iotWifi.message;
+    const wifiSSID = iotWifit.getSSID();
+    console.log(wifiSSID);
+
+    iotWifit.connect(wifiSSID, 'arpit2438735', false, (data)=> {
+      console.log(data);
+    });
   }
 }

@@ -1,6 +1,9 @@
 {
   "nativescript": {
-    "id": "org.nativescript.demo"
+    "id": "org.nativescript.iotwifi.demo",
+    "tns-ios": {
+      "version": "5.1.1"
+    }
   },
   "dependencies": {
     "nativescript-theme-core": "^1.0.4",
