@@ -12,7 +12,7 @@ export class HelloWorldModel extends Observable {
     const wifiSSID = iotWifit.getSSID();
     console.log(wifiSSID);
 
-    iotWifit.connect(wifiSSID, 'arpit2438735', false, (data)=> {
+    iotWifit.connect(wifiSSID, 'password', false, (data)=> {
       console.log(data);
     });
   }
